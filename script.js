@@ -26,6 +26,13 @@ function converter() {
     result.style.color = "red";
     return;
   }
+
+  if (startEnhet === "mm" && sluttEnhet == "cm") {
+    convertedNumber = input / 10;
+  }
+
+  console.log(convertedNumber);
+  result.textContent = convertedNumber;
 }
 
 button.addEventListener('click', function (event) {
