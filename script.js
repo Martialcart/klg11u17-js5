@@ -27,8 +27,36 @@ function converter() {
     return;
   }
 
-  if (startEnhet === "mm" && sluttEnhet == "cm") {
-    convertedNumber = input / 10;
+  if (startEnhet === "mm") {
+    convertedNumber = input / 1000;
+  }
+
+  else if (startEnhet === "cm") {
+    convertedNumber = input / 100;
+  }
+
+  else if (startEnhet === "m") {
+    convertedNumber = input;
+  }
+
+  else if (startEnhet === "km") {
+    convertedNumber = input * 1000;
+  }
+
+  if (sluttEnhet === "m") {
+    convertedNumber = convertedNumber;
+  }
+
+  else if (sluttEnhet === "cm") {
+    convertedNumber = convertedNumber * 100;
+  }
+
+  else if (sluttEnhet === "mm") {
+    convertedNumber = convertedNumber * 1000;
+  }
+
+  else if (sluttEnhet === "km") {
+    convertedNumber = convertedNumber / 1000;
   }
 
   console.log(convertedNumber);
